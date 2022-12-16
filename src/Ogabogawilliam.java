@@ -7,7 +7,7 @@ public class Ogabogawilliam {
 
         Scanner scanner = new Scanner(new File("ord.txt"));
 
-        int slumptal = (int)(Math.random()*156)*2;
+        int slumptal = (int)(Math.random()*156)*3;
 
         for (int i = 0 ; i < slumptal ; i++) {
             scanner.nextLine();
