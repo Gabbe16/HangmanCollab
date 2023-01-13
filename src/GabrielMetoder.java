@@ -1,5 +1,6 @@
 import javax.swing.*;
 
+
 public class GabrielMetoder {
     public static void main(String[] args) {
         // String name = "Gabriel"; (ordet som ska bli hemligt)
@@ -37,17 +38,16 @@ public class GabrielMetoder {
 
     public static String guessing(String y) {
         int guesses = 0;
+        String guessedLetters = "";
         while (guesses < 15) {
             String letter = JOptionPane.showInputDialog("Guess a letter");
             char c = letter.charAt(0);
-            guesses++;
             if (listContainsLetter(y,c)) {
-                int arrayNumber = 0;
-                char[] lettersGuessed = new char[26];
-                arrayNumber++;
+                guessedLetters = "" + c;
+                guesses++;
             }
         }
-        return ;
+        return guessedLetters;
 
     }
 
