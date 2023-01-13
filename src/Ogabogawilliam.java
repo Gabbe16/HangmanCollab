@@ -20,11 +20,26 @@ public class Ogabogawilliam {
         }
     }
 
-    public static String Gamecheck(String y) {
+    public static String Gamecheck(String y, int numberOfWrongGuesses) {
 
-        String correctWord ;
+        String correctWord = "nlkhsdflh";
         String _a____B_ ;
 
-        return y;
+        if (correctWord.equals(y)) {
+            // you win
+        }
+        if (numberOfWrongGuesses > 9) {
+            // you lose
+        }
+
+
+
+
+        if (y.contains("_")) {
+            // Play on
+            return y;
+
+        }
+        return correctWord;
     }
 }
