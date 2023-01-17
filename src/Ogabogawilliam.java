@@ -28,12 +28,6 @@ public class Ogabogawilliam {
         if (correctWord.equals(y)) {
             // you win
         }
-        if (numberOfWrongGuesses > 9) {
-            // you lose
-        }
-
-
-
 
         if (y.contains("_")) {
             // Play on
