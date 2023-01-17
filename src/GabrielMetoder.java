@@ -17,10 +17,6 @@ public class GabrielMetoder {
         return maskedWord;
     }
 
-    public static String list() {
-        String guessedLetters = "";
-        return guessedLetters;
-    }
 
     public static boolean listContainsLetter(String list, char c) {
         char[] alphabet = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
@@ -49,6 +45,33 @@ public class GabrielMetoder {
         }
         return guessedLetters;
 
+    }
+
+    public static int countLetterInString(String text, char letter) {
+        int countLetters = 0;
+        for ( int i = 0 ; i<text.length() ; i++ ) {
+            if (text.charAt(i) == letter) {
+                countLetters++;
+            }
+        }
+        return countLetters;
+    }
+
+    public static int[] locationOfLetter(String text, char letter) {
+        int countLetters = countLetterInString(text, letter);
+        int[] positions = new int[countLetters];
+        int letterFound = 0;
+
+        for(int i = 0 ; i<text.length() ; i++ ) {
+            positions[letterFound] = i;
+            letterFound++;
+        }
+        return positions;
+    }
+
+    public static String replaceLetter(String text, char letter, int position) {
+        String newText = text.substring(0,position-1) + letter + text.substring(position+1);
+        return newText;
     }
 
 }
