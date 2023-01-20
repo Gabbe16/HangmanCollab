@@ -1,9 +1,12 @@
 import java.awt.*;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.security.PrivateKey;
 import java.util.Scanner;
 
+
 public class Ogabogawilliam {
+
     public static void main(String[] args) throws FileNotFoundException {
 
         Scanner scanner = new Scanner(new File("ord.txt"));
@@ -19,21 +22,23 @@ public class Ogabogawilliam {
 
         }
     }
+        public static String Gamecheck(String y, int numberOfWrongGuesses) {
 
-    public static String Gamecheck(String y, int numberOfWrongGuesses) {
+            String correctWord = "nlkhsdflh";
+            String _a____B_ ;
 
-        String correctWord = "nlkhsdflh";
-        String _a____B_ ;
+            if (correctWord.equals(y)) {
+                // you win
+            }
 
-        if (correctWord.equals(y)) {
-            // you win
+            if (y.contains("_")) {
+                // Play on
+                return y;
+
+            }
+            return correctWord;
         }
-
-        if (y.contains("_")) {
-            // Play on
-            return y;
-
-        }
-        return correctWord;
     }
-}
+
+
+
