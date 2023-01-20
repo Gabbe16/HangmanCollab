@@ -13,31 +13,22 @@ public class Main {
             for (int i = 0; i < slumptal; i++) {
                 scanner.nextLine();
             }
-            String hiddenWord = GabrielMetoder.countChar(scanner.nextLine());
+            String word = scanner.nextLine();
+            String hiddenWord = GabrielMetoder.countChar(word);
             System.out.println(hiddenWord);
             GabrielMetoder.guessing(hiddenWord);
-            {
+            char lastLetterGuessed = GabrielMetoder.guessing(hiddenWord).charAt(word.length()-1);
 
+            if (word.contains(""+ lastLetterGuessed)) {
+                GabrielMetoder.countLetterInString(word, lastLetterGuessed);
+                int[] letterPos = GabrielMetoder.locationOfLetter(hiddenWord, lastLetterGuessed);
+
+                for (int i = 0 ; i < letterPos.length ; i++) {
+                    hiddenWord = GabrielMetoder.replaceLetter(hiddenWord, lastLetterGuessed, letterPos[i]);
+                }
             }
-        }
-
-
-
-    public static String Gamecheck(String y, int numberOfWrongGuesses) {
-
-        String correctWord = "nlkhsdflh";
-        String _a____B_ ;
-
-        if (correctWord.equals(y)) {
-            // you win
-        }
-
-        if (y.contains("_")) {
-            // Play on
-            return y;
 
         }
-        return correctWord;
-    }
+
 }
 

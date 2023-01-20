@@ -36,14 +36,14 @@ public class GabrielMetoder {
         int guesses = 6;
         int i = 0;
         String guessedLetters = "";
-        for ( i = 0 ; i<guesses ; i++  ) {
+        //for ( i = 0 ; i<guesses ; i++  ) {
             String letter = JOptionPane.showInputDialog("Guess a letter");
             char c = letter.charAt(0);
             if (listContainsLetter(y,c)) {
                 guessedLetters = "" + c;
                 guesses++;
             }
-        }
+        //}
         return guessedLetters;
 
     }
